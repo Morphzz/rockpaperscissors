@@ -7,3 +7,15 @@
   justify-content:space-between;
   
 }
+#input{
+  display:flex;
+  justify-content:space-between;
+}
+#userChoice{
+  display:flex;
+  justify-content:space-between;
+}
+#computerChoice{
+  display:flex;
+  justify-content:space-between;
+}
