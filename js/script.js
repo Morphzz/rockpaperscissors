@@ -20,11 +20,37 @@ $("#shoot").click(function() {
     
    randomNumber = Math.random()
    if(randomNumber < .333) {
-        $("#computerChoice").text("nice try"); 
+       computerChoice = "rock"
+        $("#computerChoice").text("rock"); 
+   } else if(randomNumber < .666){
+        $("#computerChoice").text("paper");
+          computerChoice = "paper"  
+   } else{
+        $("#computerChoice").text("scissors");
+            computerChoice = "scissors"
+   } 
+   
+   if(computerChoice === userChoice) {
+       winner = "draw"
+      $("#result").text("draw");
+   } 
+   else if(computerChoice === "rock" && userChoice === "paper"){
+       winner = "user wins"
+      $("#result").text("user wins")
    }
+    
+    if(userChoice === "rock" && computerChoice === "paper") {
+     winner = "computer wins"
+    $("#result").text("computer wins");
+    
+   } else if(computerChoice === "paper" && userChoice === "scissors") {
+    winner = "user wins"
+    $("#result").text("user wins");
+   } 
+   
    
   
     console.log()
-});
-
-
+   });
+    
+ 
